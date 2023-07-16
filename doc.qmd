@@ -20,16 +20,16 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 
 > An API is just a set of rules (interface) that the \[server and client\] agree to follow.
 
--   Servers, simply put, are computers
-    -   Web servers continuously run the programs (API's) loaded onto them
-        -   These programs wait for a request to generate a web page
--   API's:
+-   **Servers**, simply put, are computers
+    -   Web servers continuously run the programs (**API**'s) loaded onto them
+        -   These programs wait for a **request** to generate a web page
+-   **API**'s:
     1.  Make a website's data accessible
-    2.  Integrate the server (program) and client (user)
+    2.  Integrate the **server** (program) and **client** (user)
 -   Key terms:
-    -   Server: A powerful computer that runs an API
-    -   API: The "hidden" portion of a website that is meant for computer consumption
-    -   Client: A program that exchanges data with a server through an API
+    -   **Server**: A powerful computer that runs an API
+    -   **API**: The "hidden" portion of a website that is meant for computer consumption
+    -   **Client**: A program that exchanges data with a server through an API
 
 ## Chapter 2: Protocols
 
@@ -37,15 +37,15 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 
 > A computer protocol an accepted set of rules that govern how two computers can speak to each other.
 
--   Protocols can be thought of as "etiquette for computers" - rules that guide interaction
+-   **Protocols** can be thought of as "etiquette for computers" - rules that guide interaction
     -   Computer etiquette, in contrast to social etiquette, is extremely rigid
     -   Rigidity in this case means communication must be specifically arranged
 
 #### HTTP
 
--   HTTP is the ubiquitous protocol for the web
--   HTTP involves *requests* and *responses* between the server and the client
--   The *request*-*response* cycle is comprised of five pieces:
+-   **HTTP** is the ubiquitous protocol for the web
+-   **HTTP** involves **requests** and **responses** between the server and the client
+-   The **request**-**response** cycle is comprised of five pieces:
 
 |                 | Requests | Responses |
 |-----------------|:--------:|:---------:|
@@ -55,15 +55,15 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 | **Body**        |    ✅    |    ✅     |
 | **Status Code** |    ❌    |    ✅     |
 
-1.  A **URL** (Uniform Resource Locator) is the "noun" of an API *request* - a unique address that points to a program's resources
-2.  The *request's* **method** (the verb) answers the question "What kind of action should be taken?":
+1.  A **URL** (Uniform Resource Locator) is the "noun" of an API **request** - a unique address that points to a program's resources
+2.  The **request**'s **method** (the verb) answers the question "What kind of action should be taken?":
     1.  GET (retrieve)
     2.  POST (create)
     3.  PUT (modify)
     4.  DELETE (delete)
-3.  **Headers** provide meta-information about a *request* or *response* (e.g. mobile vs desktop)
-4.  The **body** contains the data for the *request* or *response*
-5.  The **status code** is a three digit number that communicates the *response's* result
+3.  **Headers** provide meta-information about a **request** or **response** (e.g. mobile vs desktop)
+4.  The **body** contains the data for the **request** or **response**
+5.  The **status code** is a three digit number that communicates the **response**'s result
 
 ## Chapter 3: Data formats
 
@@ -71,24 +71,24 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 
 -   Data is arranged into a commonly-understood format, usually either **JSON** (JavaScript Object Notation or **XML** (Extensible Markup Language)
 
--   Data formats can be noted in both requests and responses
+-   Data formats can be noted in both **requests** and **responses**
 
-    -   In a response, the `Content-Type` header can be set to specify the format of the data included in the response
-    -   In a request, the `Accept` header can be set to specify the data format required by the client
+    -   In a **response**, the `Content-Type` header can be set to specify the format of the data included in the **response**
+    -   In a **request**, the `Accept` header can be set to specify the data format required by the **client**
 
 #### JSON
 
--   JSON represents data in *key*-*value* pairs
+-   **JSON** represents data in **key**-**value** pairs
 
-    -   *Keys* identify the attribute of the object being described
-    -   *Values* contain the objet's descriptions corresponding to each attribute
-    -   Pairs can be nested as *associative arrays*
+    -   **Keys** identify the attribute of the object being described
+    -   **Values** contain the objet's descriptions corresponding to each attribute
+    -   Pairs can be nested as **associative arrays**
 
 #### XML
 
--   XML represents data in building blocks called nodes
-    -   Each object starts with a root node; subsequent nodes are nested inside
-    -   Each item in the object is represented by its own node
+-   **XML** represents data in building blocks called **nodes**
+    -   Each object starts with a root **node**; subsequent **nodes** are nested inside
+    -   Each item in the object is represented by its own **node**
 
 ## Chapters 4 + 5: Authentication
 
