@@ -6,7 +6,6 @@ format:
   html:
     theme:
       dark: darkly
-      light: flatly
     toc: true
     toc-location: right
     toc-depth: 4
@@ -16,6 +15,8 @@ format:
       <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300&family=Hind+Siliguri&display=swap" rel="stylesheet">
 mainfont: Karma
 ---
+
+[*Source Code*](https://github.com/joshwlivingston/zapier-intro "joshwlivingston/zapier-intro")
 
 ```{=html}
 <style>
