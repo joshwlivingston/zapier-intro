@@ -62,7 +62,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json">JSON</a></li>
   <li><a href="#xml" id="toc-xml" class="nav-link" data-scroll-target="#xml">XML</a></li>
   </ul></li>
-  <li><a href="#chapters-4-5-authentication" id="toc-chapters-4-5-authentication" class="nav-link" data-scroll-target="#chapters-4-5-authentication">Chapters 4 + 5: Authentication</a></li>
+  <li><a href="#chapters-4-5-authentication" id="toc-chapters-4-5-authentication" class="nav-link" data-scroll-target="#chapters-4-5-authentication">Chapters 4 + 5: Authentication</a>
+  <ul>
+  <li><a href="#basic-authentication" id="toc-basic-authentication" class="nav-link" data-scroll-target="#basic-authentication">Basic Authentication</a></li>
+  <li><a href="#api-key-authentication" id="toc-api-key-authentication" class="nav-link" data-scroll-target="#api-key-authentication">API Key Authentication</a></li>
+  </ul></li>
   <li><a href="#chapter-6-api-design" id="toc-chapter-6-api-design" class="nav-link" data-scroll-target="#chapter-6-api-design">Chapter 6: API Design</a></li>
   <li><a href="#chapter-7-real-time-communication" id="toc-chapter-7-real-time-communication" class="nav-link" data-scroll-target="#chapter-7-real-time-communication">Chapter 7: Real-Time Communication</a></li>
   <li><a href="#chapter-8-implementation" id="toc-chapter-8-implementation" class="nav-link" data-scroll-target="#chapter-8-implementation">Chapter 8: Implementation</a></li>
@@ -126,9 +130,9 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 <li>Key terms:
 <ul>
-<li><strong>Server</strong>: A powerful computer that runs an API</li>
+<li><strong>Server</strong>: A powerful computer that runs an <strong>API</strong></li>
 <li><strong>API</strong>: The “hidden” portion of a website that is meant for computer consumption</li>
-<li><strong>Client</strong>: A program that exchanges data with a server through an API</li>
+<li><strong>Client</strong>: A program that exchanges data with a server through an <strong>API</strong></li>
 </ul></li>
 </ul>
 </section>
@@ -206,12 +210,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="chapter-3-data-formats" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-3-data-formats">Chapter 3: Data formats</h2>
 <p><a href="https://zapier.com/resources/guides/apis/data-formats" title="Chapter 3: Data formats - An introduction to APIs | Zapier guides"><em>Link to chapter</em></a></p>
+<blockquote class="blockquote">
+<p>A well-designed format is dictated by what makes the information the easiest for the intended audience to understand.</p>
+</blockquote>
 <ul>
 <li><p>Data is arranged into a commonly-understood format, usually either <strong>JSON</strong> (JavaScript Object Notation or <strong>XML</strong> (Extensible Markup Language)</p></li>
 <li><p>Data formats can be noted in both <strong>requests</strong> and <strong>responses</strong></p>
 <ul>
-<li>In a <strong>response</strong>, the <code>Content-Type</code> header can be set to specify the format of the data included in the <strong>response</strong></li>
-<li>In a <strong>request</strong>, the <code>Accept</code> header can be set to specify the data format required by the <strong>client</strong></li>
+<li>In a <strong>response</strong>, the <code>Content-Type</code> <strong>header</strong> can be set to specify the format of the data included in the <strong>response</strong></li>
+<li>In a <strong>request</strong>, the <code>Accept</code> <strong>header</strong> can be set to specify the data format required by the <strong>client</strong></li>
 </ul></li>
 </ul>
 <section id="json" class="level4">
@@ -240,6 +247,44 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="chapters-4-5-authentication">Chapters 4 + 5: Authentication</h2>
 <p><a href="https://zapier.com/resources/guides/apis/authentication-part-1" title="Chapter 4: Authentication, part 1 - An introduction to APIs | Zapier guides"><em>Link to Chapter 4</em></a></p>
 <p><a href="https://zapier.com/resources/guides/apis/authentication-part-2" title="Chapter 5: Authentication, part 2 - An introduction to APIs | Zapier guides"><em>Link to Chapter 5</em></a></p>
+<blockquote class="blockquote">
+<p>When you authenticate with a server, you prove your identity to the server by telling it information that only you know [hopefully].</p>
+</blockquote>
+<ul>
+<li><p><strong>Authentication</strong> is a process that proves the <strong>client</strong>’s identity to the <strong>server</strong> using <strong>credentials</strong></p></li>
+<li><p><strong>Authentication schemes</strong> are techniques an <strong>API</strong> uses to <strong>authenticate</strong> a <strong>client</strong></p></li>
+</ul>
+<section id="basic-authentication" class="level4">
+<h4 class="anchored" data-anchor-id="basic-authentication">Basic Authentication</h4>
+<ul>
+<li><p><strong>Basic authentication</strong> is an <strong>authentication scheme</strong> that uses two <strong>credentials</strong>: a username and password</p>
+<ol type="1">
+<li><p>These <strong>credentials</strong> are combined, encoded, and passed to the <strong>request</strong> in a <strong>header</strong> called <strong>authorization</strong></p></li>
+<li><p>If there is no match to <strong>credentials</strong> on the <strong>server</strong>, a <strong>status code</strong> (401) is returned in the <strong>response</strong>, indicating a failed <strong>authentication</strong></p></li>
+</ol></li>
+<li><p>Security is a concern when using <strong>basic authentication</strong>:</p>
+<ul>
+<li>Access must be made completely open for all authorized users due to econding</li>
+<li>No way to prevent being locked out of an owned account when sharing username and password</li>
+</ul></li>
+</ul>
+</section>
+<section id="api-key-authentication" class="level4">
+<h4 class="anchored" data-anchor-id="api-key-authentication">API Key Authentication</h4>
+<ul>
+<li><p><strong>API key authentication</strong> is an <strong>authentication scheme</strong> using an <strong>API key</strong>, a unique string assigned to each user of an <strong>API</strong></p></li>
+<li><p><strong>API key authentication</strong> provides two main benefits over <strong>basic authentication:</strong></p>
+<ul>
+<li><p>The unique key allows access to the <strong>API</strong> to be controlled at the user level</p></li>
+<li><p>The unique key allows users to share their <strong>API</strong> access while limiting account access (e.g., changing an account password)</p></li>
+</ul></li>
+<li><p>No standard exists for <strong>API key authentication</strong>, but two implementations are more common:</p>
+<ol type="1">
+<li><p>Add the <strong>API key</strong> to the <strong>authorization header</strong></p></li>
+<li><p>Add the <strong>API key</strong> to the <strong>URL</strong></p></li>
+</ol></li>
+</ul>
+</section>
 </section>
 <section id="chapter-6-api-design" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-6-api-design">Chapter 6: API Design</h2>
