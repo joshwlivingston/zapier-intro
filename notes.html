@@ -9,7 +9,7 @@
 <meta name="author" content="Josh Livingston">
 <meta name="dcterms.date" content="2023-07-16">
 
-<title>Introduction to API’s</title>
+<title>Notes on Zapier’s "An Introduction to APIs"</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,16 +25,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="doc_files/libs/clipboard/clipboard.min.js"></script>
-<script src="doc_files/libs/quarto-html/quarto.js"></script>
-<script src="doc_files/libs/quarto-html/popper.min.js"></script>
-<script src="doc_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="doc_files/libs/quarto-html/anchor.min.js"></script>
-<link href="doc_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="doc_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="doc_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="doc_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="doc_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="notes_files/libs/clipboard/clipboard.min.js"></script>
+<script src="notes_files/libs/quarto-html/quarto.js"></script>
+<script src="notes_files/libs/quarto-html/popper.min.js"></script>
+<script src="notes_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="notes_files/libs/quarto-html/anchor.min.js"></script>
+<link href="notes_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="notes_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="notes_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="notes_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="notes_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&amp;display=swap" rel="stylesheet">
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to API’s</h1>
+<h1 class="title">Notes on Zapier’s "An Introduction to APIs"</h1>
 </div>
 
 
@@ -100,10 +100,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<a href="https://github.com/joshwlivingston/zapier-intro" style="color:#000"><i class="fa fa-brands fa-github"></i></a>
+<a href="https://github.com/joshwlivingston/zapier-intro" title="GitHub - joshwlivingston/zapier-intro: Notes from Zapier's Intro to APIs" style="color:#000"><i class="fa fa-brands fa-github"></i></a>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This document contains my notes and exercise work to Zapier’s <a href="https://zapier.com/resources/guides/apis" title="An Introduction to Api's - Zapier">An Introduction to Api’s</a>, which is recommended as foundational reading for those who are new to API’s and intending to build an <a href="https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html" title="Best practices for API packages">API Package</a> using <code>httr</code>.</p>
+<p>This document contains my notes on Zapier’s <a href="https://zapier.com/resources/guides/apis" title="An introduction to APIs | Zapier guides">An Introduction to APIs</a>, which is recommended as foundational reading for those who are new to APIs and intending to build an <a href="https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html" title="Best practices for API packages">API Package</a> using <code>httr</code>.</p>
 </section>
 <section id="chapter-1-introduction" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-1-introduction">Chapter 1: Introduction</h2>
@@ -114,12 +114,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Servers</strong>, simply put, are computers
 <ul>
-<li>Web servers continuously run the programs (<strong>API</strong>’s) loaded onto them
+<li>Web servers continuously run the programs (<strong>APIs</strong>) loaded onto them
 <ul>
 <li>These programs wait for a <strong>request</strong> to generate a web page</li>
 </ul></li>
 </ul></li>
-<li><strong>API</strong>’s:
+<li><strong>APIs</strong>:
 <ol type="1">
 <li>Make a website’s data accessible</li>
 <li>Integrate the <strong>server</strong> (program) and <strong>client</strong> (user)</li>
