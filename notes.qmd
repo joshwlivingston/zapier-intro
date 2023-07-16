@@ -1,6 +1,6 @@
 ---
-title: "Introduction to API's"
-author: "Josh Livingston"
+title: Notes on Zapier's \"An Introduction to APIs\"
+author: Josh Livingston
 date: today
 format: 
   html:
@@ -17,11 +17,11 @@ mainfont: Hind Siliguri
 ---
 
 ```{=html}
-<a href="https://github.com/joshwlivingston/zapier-intro" style="color:#000"><i class = "fa fa-brands fa-github"></i></a>
+<a href="https://github.com/joshwlivingston/zapier-intro" title= "GitHub - joshwlivingston/zapier-intro: Notes from Zapier's Intro to APIs" style="color:#000"><i class = "fa fa-brands fa-github"></i></a>
 ```
 ## Introduction
 
-This document contains my notes and exercise work to Zapier's [An Introduction to Api's](https://zapier.com/resources/guides/apis "An Introduction to Api's - Zapier"), which is recommended as foundational reading for those who are new to API's and intending to build an [API Package](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html "Best practices for API packages") using `httr`.
+This document contains my notes on Zapier's [An Introduction to APIs](https://zapier.com/resources/guides/apis "An introduction to APIs | Zapier guides"), which is recommended as foundational reading for those who are new to APIs and intending to build an [API Package](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html "Best practices for API packages") using `httr`.
 
 ## Chapter 1: Introduction
 
@@ -30,9 +30,9 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 > An API is just a set of rules (interface) that the \[server and client\] agree to follow.
 
 -   **Servers**, simply put, are computers
-    -   Web servers continuously run the programs (**API**'s) loaded onto them
+    -   Web servers continuously run the programs (**APIs**) loaded onto them
         -   These programs wait for a **request** to generate a web page
--   **API**'s:
+-   **APIs**:
     1.  Make a website's data accessible
     2.  Integrate the **server** (program) and **client** (user)
 -   Key terms:
