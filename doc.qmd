@@ -1,9 +1,13 @@
 ---
-title: "Intro to API Notes"
+title: "Introduction to API's"
 author: "Josh Livingston"
-date: "2023-06-26"
+date: today
 format: html
 editor: source
+theme: superhero
+toc: true
+toc-location: right
+toc-depth: 4
 ---
 
 ## Introduction
@@ -11,6 +15,8 @@ editor: source
 This document contains my notes and exercise work to Zapier's [An Introduction to Api's](https://zapier.com/resources/guides/apis "An Introduction to Api's - Zapier"), which is recommended as foundational reading for those who are new to API's and intending to build an [API Package](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html "Best practices for API packages") using `httr`.
 
 ## Chapter 1: Introduction
+
+[*Link to chapter*](https://zapier.com/resources/guides/apis/introduction "Chapter 1: Introduction - An introduction to APIs | Zapier guides")
 
 > An API is just a set of rules (interface) that the \[server and client\] agree to follow.
 
@@ -27,13 +33,18 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 
 ## Chapter 2: Protocols
 
+[*Link to chapter*](https://zapier.com/resources/guides/apis/protocols "Chapter 2: Protocols - An introduction to APIs | Zapier guides")
+
 > A computer protocol an accepted set of rules that govern how two computers can speak to each other.
 
 -   Protocols can be thought of as "etiquette for computers" - rules that guide interaction
     -   Computer etiquette, in contrast to social etiquette, is extremely rigid
     -   Rigidity in this case means communication must be specifically arranged
+
+#### HTTP
+
 -   HTTP is the ubiquitous protocol for the web
-    -   HTTP involves *requests* and *responses* between the server and the client
+-   HTTP involves *requests* and *responses* between the server and the client
 -   The *request*-*response* cycle is comprised of five pieces:
 
 |                 | Requests | Responses |
@@ -56,6 +67,8 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 
 ## Chapter 3: Data formats
 
+[*Link to chapter*](https://zapier.com/resources/guides/apis/data-formats "Chapter 3: Data formats - An introduction to APIs | Zapier guides")
+
 -   Data is arranged into a commonly-understood format, usually either **JSON** (JavaScript Object Notation or **XML** (Extensible Markup Language)
 
 -   Data formats can be noted in both requests and responses
@@ -66,6 +79,7 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 #### JSON
 
 -   JSON represents data in *key*-*value* pairs
+
     -   *Keys* identify the attribute of the object being described
     -   *Values* contain the objet's descriptions corresponding to each attribute
     -   Pairs can be nested as *associative arrays*
@@ -77,3 +91,19 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
     -   Each item in the object is represented by its own node
 
 ## Chapters 4 + 5: Authentication
+
+[*Link to Chapter 4*](https://zapier.com/resources/guides/apis/authentication-part-1 "Chapter 4: Authentication, part 1 - An introduction to APIs | Zapier guides")
+
+[*Link to Chapter 5*](https://zapier.com/resources/guides/apis/authentication-part-2 "Chapter 5: Authentication, part 2 - An introduction to APIs | Zapier guides")
+
+## Chapter 6: API Design
+
+[*Link to Chapter*](https://zapier.com/resources/guides/apis/design "Chapter 6: API design - An introduction to APIs | Zapier guides")
+
+## Chapter 7: Real-Time Communication
+
+[*Link to Chapter*](https://zapier.com/resources/guides/apis/real-time-communication "Chapter 7: Real-Time communication - An introduction to APIs | Zapier guides")
+
+## Chapter 8: Implementation
+
+[*Link to Chapter*](https://zapier.com/resources/guides/apis/implementation "Chapter 8: Implementation - An introduction to APIs | Zapier guides")
