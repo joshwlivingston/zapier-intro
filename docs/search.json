@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "doc.html",
+    "href": "doc.html",
+    "title": "Introduction to API’s",
+    "section": "",
+    "text": "This document contains my notes and exercise work to Zapier’s An Introduction to Api’s, which is recommended as foundational reading for those who are new to API’s and intending to build an API Package using httr."
+  },
+  {
+    "objectID": "doc.html#introduction",
+    "href": "doc.html#introduction",
+    "title": "Introduction to API’s",
+    "section": "",
+    "text": "This document contains my notes and exercise work to Zapier’s An Introduction to Api’s, which is recommended as foundational reading for those who are new to API’s and intending to build an API Package using httr."
+  },
+  {
+    "objectID": "doc.html#chapter-1-introduction",
+    "href": "doc.html#chapter-1-introduction",
+    "title": "Introduction to API’s",
+    "section": "Chapter 1: Introduction",
+    "text": "Chapter 1: Introduction\nLink to chapter\n\nAn API is just a set of rules (interface) that the [server and client] agree to follow.\n\n\nServers, simply put, are computers\n\nWeb servers continuously run the programs (API’s) loaded onto them\n\nThese programs wait for a request to generate a web page\n\n\nAPI’s:\n\nMake a website’s data accessible\nIntegrate the server (program) and client (user)\n\nKey terms:\n\nServer: A powerful computer that runs an API\nAPI: The “hidden” portion of a website that is meant for computer consumption\nClient: A program that exchanges data with a server through an API"
+  },
+  {
+    "objectID": "doc.html#chapter-2-protocols",
+    "href": "doc.html#chapter-2-protocols",
+    "title": "Introduction to API’s",
+    "section": "Chapter 2: Protocols",
+    "text": "Chapter 2: Protocols\nLink to chapter\n\nA computer protocol an accepted set of rules that govern how two computers can speak to each other.\n\n\nProtocols can be thought of as “etiquette for computers” - rules that guide interaction\n\nComputer etiquette, in contrast to social etiquette, is extremely rigid\nRigidity in this case means communication must be specifically arranged\n\n\n\nHTTP\n\nHTTP is the ubiquitous protocol for the web\nHTTP involves requests and responses between the server and the client\nThe request-response cycle is comprised of five pieces:\n\n\n\n\n\nRequests\nResponses\n\n\n\n\nURL\n✅\n❌\n\n\nMethod\n✅\n❌\n\n\nHeaders\n✅\n✅\n\n\nBody\n✅\n✅\n\n\nStatus Code\n❌\n✅\n\n\n\n\nA URL (Uniform Resource Locator) is the “noun” of an API request - a unique address that points to a program’s resources\nThe request’s method (the verb) answers the question “What kind of action should be taken?”:\n\nGET (retrieve)\nPOST (create)\nPUT (modify)\nDELETE (delete)\n\nHeaders provide meta-information about a request or response (e.g. mobile vs desktop)\nThe body contains the data for the request or response\nThe status code is a three digit number that communicates the response’s result"
+  },
+  {
+    "objectID": "doc.html#chapter-3-data-formats",
+    "href": "doc.html#chapter-3-data-formats",
+    "title": "Introduction to API’s",
+    "section": "Chapter 3: Data formats",
+    "text": "Chapter 3: Data formats\nLink to chapter\n\nData is arranged into a commonly-understood format, usually either JSON (JavaScript Object Notation or XML (Extensible Markup Language)\nData formats can be noted in both requests and responses\n\nIn a response, the Content-Type header can be set to specify the format of the data included in the response\nIn a request, the Accept header can be set to specify the data format required by the client\n\n\n\nJSON\n\nJSON represents data in key-value pairs\n\nKeys identify the attribute of the object being described\nValues contain the objet’s descriptions corresponding to each attribute\nPairs can be nested as associative arrays\n\n\n\n\nXML\n\nXML represents data in building blocks called nodes\n\nEach object starts with a root node; subsequent nodes are nested inside\nEach item in the object is represented by its own node"
+  },
+  {
+    "objectID": "doc.html#chapters-4-5-authentication",
+    "href": "doc.html#chapters-4-5-authentication",
+    "title": "Introduction to API’s",
+    "section": "Chapters 4 + 5: Authentication",
+    "text": "Chapters 4 + 5: Authentication\nLink to Chapter 4\nLink to Chapter 5"
+  },
+  {
+    "objectID": "doc.html#chapter-6-api-design",
+    "href": "doc.html#chapter-6-api-design",
+    "title": "Introduction to API’s",
+    "section": "Chapter 6: API Design",
+    "text": "Chapter 6: API Design\nLink to Chapter"
+  },
+  {
+    "objectID": "doc.html#chapter-7-real-time-communication",
+    "href": "doc.html#chapter-7-real-time-communication",
+    "title": "Introduction to API’s",
+    "section": "Chapter 7: Real-Time Communication",
+    "text": "Chapter 7: Real-Time Communication\nLink to Chapter"
+  },
+  {
+    "objectID": "doc.html#chapter-8-implementation",
+    "href": "doc.html#chapter-8-implementation",
+    "title": "Introduction to API’s",
+    "section": "Chapter 8: Implementation",
+    "text": "Chapter 8: Implementation\nLink to Chapter"
+  }
+]

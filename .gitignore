@@ -9,9 +9,7 @@
 .quarto
 # end
 
-# HTML outputs
-doc_files/
-doc.html
-
 # R Project files
 *.Rproj
+
+/.quarto/
