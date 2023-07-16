@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.624">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Josh Livingston">
+<meta name="dcterms.date" content="2023-07-16">
+
+<title>Introduction to API’s</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Karma:wght@300&amp;family=Hind+Siliguri&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#chapter-1-introduction" id="toc-chapter-1-introduction" class="nav-link" data-scroll-target="#chapter-1-introduction">Chapter 1: Introduction</a></li>
+  <li><a href="#chapter-2-protocols" id="toc-chapter-2-protocols" class="nav-link" data-scroll-target="#chapter-2-protocols">Chapter 2: Protocols</a>
+  <ul class="collapse">
+  <li><a href="#http" id="toc-http" class="nav-link" data-scroll-target="#http">HTTP</a></li>
+  </ul></li>
+  <li><a href="#chapter-3-data-formats" id="toc-chapter-3-data-formats" class="nav-link" data-scroll-target="#chapter-3-data-formats">Chapter 3: Data formats</a>
+  <ul class="collapse">
+  <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json">JSON</a></li>
+  <li><a href="#xml" id="toc-xml" class="nav-link" data-scroll-target="#xml">XML</a></li>
+  </ul></li>
+  <li><a href="#chapters-4-5-authentication" id="toc-chapters-4-5-authentication" class="nav-link" data-scroll-target="#chapters-4-5-authentication">Chapters 4 + 5: Authentication</a></li>
+  <li><a href="#chapter-6-api-design" id="toc-chapter-6-api-design" class="nav-link" data-scroll-target="#chapter-6-api-design">Chapter 6: API Design</a></li>
+  <li><a href="#chapter-7-real-time-communication" id="toc-chapter-7-real-time-communication" class="nav-link" data-scroll-target="#chapter-7-real-time-communication">Chapter 7: Real-Time Communication</a></li>
+  <li><a href="#chapter-8-implementation" id="toc-chapter-8-implementation" class="nav-link" data-scroll-target="#chapter-8-implementation">Chapter 8: Implementation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to API’s</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Josh Livingston </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 16, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<style>
+  h1, h2, h3, h4 {
+    font-family: Hind Siliguri;
+  }
+</style>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This document contains my notes and exercise work to Zapier’s <a href="https://zapier.com/resources/guides/apis" title="An Introduction to Api's - Zapier">An Introduction to Api’s</a>, which is recommended as foundational reading for those who are new to API’s and intending to build an <a href="https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html" title="Best practices for API packages">API Package</a> using <code>httr</code>.</p>
+</section>
+<section id="chapter-1-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-1-introduction">Chapter 1: Introduction</h2>
+<p><a href="https://zapier.com/resources/guides/apis/introduction" title="Chapter 1: Introduction - An introduction to APIs | Zapier guides"><em>Link to chapter</em></a></p>
+<blockquote class="blockquote">
+<p>An API is just a set of rules (interface) that the [server and client] agree to follow.</p>
+</blockquote>
+<ul>
+<li><strong>Servers</strong>, simply put, are computers
+<ul>
+<li>Web servers continuously run the programs (<strong>API</strong>’s) loaded onto them
+<ul>
+<li>These programs wait for a <strong>request</strong> to generate a web page</li>
+</ul></li>
+</ul></li>
+<li><strong>API</strong>’s:
+<ol type="1">
+<li>Make a website’s data accessible</li>
+<li>Integrate the <strong>server</strong> (program) and <strong>client</strong> (user)</li>
+</ol></li>
+<li>Key terms:
+<ul>
+<li><strong>Server</strong>: A powerful computer that runs an API</li>
+<li><strong>API</strong>: The “hidden” portion of a website that is meant for computer consumption</li>
+<li><strong>Client</strong>: A program that exchanges data with a server through an API</li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-2-protocols" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-protocols">Chapter 2: Protocols</h2>
+<p><a href="https://zapier.com/resources/guides/apis/protocols" title="Chapter 2: Protocols - An introduction to APIs | Zapier guides"><em>Link to chapter</em></a></p>
+<blockquote class="blockquote">
+<p>A computer protocol an accepted set of rules that govern how two computers can speak to each other.</p>
+</blockquote>
+<ul>
+<li><strong>Protocols</strong> can be thought of as “etiquette for computers” - rules that guide interaction
+<ul>
+<li>Computer etiquette, in contrast to social etiquette, is extremely rigid</li>
+<li>Rigidity in this case means communication must be specifically arranged</li>
+</ul></li>
+</ul>
+<section id="http" class="level4">
+<h4 class="anchored" data-anchor-id="http">HTTP</h4>
+<ul>
+<li><strong>HTTP</strong> is the ubiquitous protocol for the web</li>
+<li><strong>HTTP</strong> involves <strong>requests</strong> and <strong>responses</strong> between the server and the client</li>
+<li>The <strong>request</strong>-<strong>response</strong> cycle is comprised of five pieces:</li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Requests</th>
+<th style="text-align: center;">Responses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>URL</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr class="even">
+<td><strong>Method</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr class="odd">
+<td><strong>Headers</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr class="even">
+<td><strong>Body</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr class="odd">
+<td><strong>Status Code</strong></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>A <strong>URL</strong> (Uniform Resource Locator) is the “noun” of an API <strong>request</strong> - a unique address that points to a program’s resources</li>
+<li>The <strong>request</strong>’s <strong>method</strong> (the verb) answers the question “What kind of action should be taken?”:
+<ol type="1">
+<li>GET (retrieve)</li>
+<li>POST (create)</li>
+<li>PUT (modify)</li>
+<li>DELETE (delete)</li>
+</ol></li>
+<li><strong>Headers</strong> provide meta-information about a <strong>request</strong> or <strong>response</strong> (e.g.&nbsp;mobile vs desktop)</li>
+<li>The <strong>body</strong> contains the data for the <strong>request</strong> or <strong>response</strong></li>
+<li>The <strong>status code</strong> is a three digit number that communicates the <strong>response</strong>’s result</li>
+</ol>
+</section>
+</section>
+<section id="chapter-3-data-formats" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-data-formats">Chapter 3: Data formats</h2>
+<p><a href="https://zapier.com/resources/guides/apis/data-formats" title="Chapter 3: Data formats - An introduction to APIs | Zapier guides"><em>Link to chapter</em></a></p>
+<ul>
+<li><p>Data is arranged into a commonly-understood format, usually either <strong>JSON</strong> (JavaScript Object Notation or <strong>XML</strong> (Extensible Markup Language)</p></li>
+<li><p>Data formats can be noted in both <strong>requests</strong> and <strong>responses</strong></p>
+<ul>
+<li>In a <strong>response</strong>, the <code>Content-Type</code> header can be set to specify the format of the data included in the <strong>response</strong></li>
+<li>In a <strong>request</strong>, the <code>Accept</code> header can be set to specify the data format required by the <strong>client</strong></li>
+</ul></li>
+</ul>
+<section id="json" class="level4">
+<h4 class="anchored" data-anchor-id="json">JSON</h4>
+<ul>
+<li><p><strong>JSON</strong> represents data in <strong>key</strong>-<strong>value</strong> pairs</p>
+<ul>
+<li><strong>Keys</strong> identify the attribute of the object being described</li>
+<li><strong>Values</strong> contain the objet’s descriptions corresponding to each attribute</li>
+<li>Pairs can be nested as <strong>associative arrays</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="xml" class="level4">
+<h4 class="anchored" data-anchor-id="xml">XML</h4>
+<ul>
+<li><strong>XML</strong> represents data in building blocks called <strong>nodes</strong>
+<ul>
+<li>Each object starts with a root <strong>node</strong>; subsequent <strong>nodes</strong> are nested inside</li>
+<li>Each item in the object is represented by its own <strong>node</strong></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="chapters-4-5-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="chapters-4-5-authentication">Chapters 4 + 5: Authentication</h2>
+<p><a href="https://zapier.com/resources/guides/apis/authentication-part-1" title="Chapter 4: Authentication, part 1 - An introduction to APIs | Zapier guides"><em>Link to Chapter 4</em></a></p>
+<p><a href="https://zapier.com/resources/guides/apis/authentication-part-2" title="Chapter 5: Authentication, part 2 - An introduction to APIs | Zapier guides"><em>Link to Chapter 5</em></a></p>
+</section>
+<section id="chapter-6-api-design" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-6-api-design">Chapter 6: API Design</h2>
+<p><a href="https://zapier.com/resources/guides/apis/design" title="Chapter 6: API design - An introduction to APIs | Zapier guides"><em>Link to Chapter</em></a></p>
+</section>
+<section id="chapter-7-real-time-communication" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-7-real-time-communication">Chapter 7: Real-Time Communication</h2>
+<p><a href="https://zapier.com/resources/guides/apis/real-time-communication" title="Chapter 7: Real-Time communication - An introduction to APIs | Zapier guides"><em>Link to Chapter</em></a></p>
+</section>
+<section id="chapter-8-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-8-implementation">Chapter 8: Implementation</h2>
+<p><a href="https://zapier.com/resources/guides/apis/implementation" title="Chapter 8: Implementation - An introduction to APIs | Zapier guides"><em>Link to Chapter</em></a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
