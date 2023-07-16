@@ -36,9 +36,9 @@ This document contains my notes on Zapier's [An Introduction to APIs](https://za
     1.  Make a website's data accessible
     2.  Integrate the **server** (program) and **client** (user)
 -   Key terms:
-    -   **Server**: A powerful computer that runs an API
+    -   **Server**: A powerful computer that runs an **API**
     -   **API**: The "hidden" portion of a website that is meant for computer consumption
-    -   **Client**: A program that exchanges data with a server through an API
+    -   **Client**: A program that exchanges data with a server through an **API**
 
 ## Chapter 2: Protocols
 
@@ -78,12 +78,14 @@ This document contains my notes on Zapier's [An Introduction to APIs](https://za
 
 [*Link to chapter*](https://zapier.com/resources/guides/apis/data-formats "Chapter 3: Data formats - An introduction to APIs | Zapier guides")
 
+> A well-designed format is dictated by what makes the information the easiest for the intended audience to understand.
+
 -   Data is arranged into a commonly-understood format, usually either **JSON** (JavaScript Object Notation or **XML** (Extensible Markup Language)
 
 -   Data formats can be noted in both **requests** and **responses**
 
-    -   In a **response**, the `Content-Type` header can be set to specify the format of the data included in the **response**
-    -   In a **request**, the `Accept` header can be set to specify the data format required by the **client**
+    -   In a **response**, the `Content-Type` **header** can be set to specify the format of the data included in the **response**
+    -   In a **request**, the `Accept` **header** can be set to specify the data format required by the **client**
 
 #### JSON
 
@@ -104,6 +106,42 @@ This document contains my notes on Zapier's [An Introduction to APIs](https://za
 [*Link to Chapter 4*](https://zapier.com/resources/guides/apis/authentication-part-1 "Chapter 4: Authentication, part 1 - An introduction to APIs | Zapier guides")
 
 [*Link to Chapter 5*](https://zapier.com/resources/guides/apis/authentication-part-2 "Chapter 5: Authentication, part 2 - An introduction to APIs | Zapier guides")
+
+> When you authenticate with a server, you prove your identity to the
+> server by telling it information that only you know \[hopefully\].
+
+-   **Authentication** is a process that proves the **client**'s identity to the **server** using **credentials**
+
+-   **Authentication schemes** are techniques an **API** uses to **authenticate** a **client**
+
+#### Basic Authentication
+
+-   **Basic authentication** is an **authentication scheme** that uses two **credentials**: a username and password
+
+    1.  These **credentials** are combined, encoded, and passed to the **request** in a **header** called **authorization**
+
+    2.  If there is no match to **credentials** on the **server**, a **status code** (401) is returned in the **response**, indicating a failed **authentication**
+
+-   Security is a concern when using **basic authentication**:
+
+    -   Access must be made completely open for all authorized users due to econding
+    -   No way to prevent being locked out of an owned account when sharing username and password
+
+#### API Key Authentication
+
+-   **API key authentication** is an **authentication scheme** using an **API key**, a unique string assigned to each user of an **API**
+
+-   **API key authentication** provides two main benefits over **basic authentication:**
+
+    -   The unique key allows access to the **API** to be controlled at the user level
+
+    -   The unique key allows users to share their **API** access while limiting account access (e.g., changing an account password)
+
+-   No standard exists for **API key authentication**, but two implementations are more common:
+
+    1.  Add the **API key** to the **authorization header**
+
+    2.  Add the **API key** to the **URL**
 
 ## Chapter 6: API Design
 
