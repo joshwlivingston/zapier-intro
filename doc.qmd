@@ -95,7 +95,7 @@ This document contains my notes and exercise work to Zapier's [An Introduction t
 -   **JSON** represents data in **key**-**value** pairs
 
     -   **Keys** identify the attribute of the object being described
-    -   **Values** contain the objet's descriptions corresponding to each attribute
+    -   **Values** contain the object's descriptions corresponding to each attribute
     -   Pairs can be nested as **associative arrays**
 
 #### XML
