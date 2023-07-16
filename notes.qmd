@@ -17,7 +17,7 @@ mainfont: Hind Siliguri
 ---
 
 ```{=html}
-<a href="https://github.com/joshwlivingston/zapier-intro" title= "GitHub - joshwlivingston/zapier-intro: Notes from Zapier's Intro to APIs" style="color:#000"><i class = "fa fa-brands fa-github"></i></a>
+<a href="https://github.com/joshwlivingston/zapier-intro" title= "GitHub - joshwlivingston/zapier-intro: Notes on Zapier's Introduction to APIs" style="color:#000"><i class = "fa fa-brands fa-github"></i></a>
 ```
 ## Introduction
 
