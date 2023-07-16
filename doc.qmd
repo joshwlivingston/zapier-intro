@@ -2,14 +2,28 @@
 title: "Introduction to API's"
 author: "Josh Livingston"
 date: today
-format: html
-editor: source
-theme: superhero
-toc: true
-toc-location: right
-toc-depth: 4
+format: 
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    toc: true
+    toc-location: right
+    toc-depth: 4
+    header-includes: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300&family=Hind+Siliguri&display=swap" rel="stylesheet">
+mainfont: Karma
 ---
 
+```{=html}
+<style>
+  h1, h2, h3, h4 {
+    font-family: Hind Siliguri;
+  }
+</style>
+```
 ## Introduction
 
 This document contains my notes and exercise work to Zapier's [An Introduction to Api's](https://zapier.com/resources/guides/apis "An Introduction to Api's - Zapier"), which is recommended as foundational reading for those who are new to API's and intending to build an [API Package](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html "Best practices for API packages") using `httr`.
